@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="landing-mode">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A professional, high-end creative portfolio featuring elegant black background aesthetics and vibrant pink glowing accents.">
+    <title>Aia | Creative Developer & Designer Portfolio</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="landing-mode">
+
+    <!-- Background glowing ambient spots -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
+    <!-- Navigation Header -->
+    <header id="header">
+        <a href="#home" class="logo" id="logo-link">My Portfolio<span>.</span></a>
+
+        <a href="cv/Pallado_CV.pdf" class="btn-download-cv" id="download-cv" download>
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="nav-link" data-nav="home">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Landing / Hero Section -->
+    <section id="home" class="landing-section">
+        <div class="hero-layout">
+            <div class="hero-content">
+                <div class="hero-subtitle">Creative Developer</div>
+                <h1 class="hero-title">Crafting digital<br><span>experiences</span> that inspire.</h1>
+                <p class="hero-desc">
+                    Hi, I'm Albea, a BSIT student, Web and Application Developer, and UI/UX Designer passionate about
+                    creating modern, responsive, and user-centered digital experiences. I combine creative design with
+                    clean,
+                    efficient code to build websites and applications that are both functional and visually engaging.
+                </p>
+                <div class="btn-group">
+                    <a href="#about" class="btn btn-primary" id="explore-btn">View My Works</a>
+                </div>
+            </div>
+
+            <div class="hero-profile">
+                <div class="hero-profile-ring"></div>
+                <div class="hero-profile-circle">
+                    <img src="img/first.jpg" alt="Albea Profile Photo" class="hero-profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <div class="about-container">
+            <!-- Left Side Frame Graphic -->
+            <div class="about-img-wrapper">
+                <div class="about-img-placeholder">
+                    <img src="img/Albea.png" alt="Developer Profile Avatar" class="about-profile-img">
+                </div>
+            </div>
+
+            <!-- Right Side Details -->
+            <div class="about-info">
+                <h3>Hi, I'm Albea.</h3>
+                <h2> I Design. I Develop. I Create.</h2>
+                <p>
+                    I'm a BSIT student and passionate Web & Application Developer who enjoys building modern,
+                    responsive, and user-centered digital experiences. I combine creative design with clean, efficient
+                    code
+                    to transform ideas into functional and engaging applications.
+                </p>
+
+                <h4 class="skills-title">Core Competencies</h4>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML5 / CSS3</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-react"></i>
+                        <span>React.js</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>Three.js</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-java"></i>
+                        <span>Java</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <span>Flutter</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>Blender</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <span>Git & GitHub</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <span>UI/UX Design</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-brands fa-figma"></i>
+                        <span>Figma</span>
+                    </div>
+
+                    <div class="skill-card">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>Canva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="projects-subtitle">
+            These featured projects showcase a selection of the systems, applications, and designs I developed
+            throughout my three years in college. While they represent some of my most notable work, several earlier
+            projects have been archived or are not included in this portfolio, as they no longer reflect my current
+            skills, development practices, and standards for user experience.
+        </p>
+        <div class="projects-grid">
+            <!-- Card 1 -->
+            <div class="project-card" data-project-id="haja">
+                <div class="project-img">
+                    <img src="img/HAJA.png" alt="HAJA Rentals & Apparel" class="project-preview">
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fa-brands fa-figma"></i> Figma</span>
+                    </div>
+                    <h3>HAJA Rentals & Apparel</h3>
+                    <div class="project-explore-btn">
+                        Explore Project <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="project-card" data-project-id="motomaster">
+                <div class="project-img">
+                    <img src="img/Motomaster.png" alt="Motomaster" class="project-preview">
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fa-solid fa-cube"></i> Three.js</span>
+                        <span class="project-tag"><i class="fa-brands fa-js"></i> JS</span>
+                        <span class="project-tag"><i class="fa-solid fa-database"></i> PHP</span>
+                    </div>
+                    <h3>Automotive Learning Platform</h3>
+                    <div class="project-explore-btn">
+                        Explore Project <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="project-card" data-project-id="car3d">
+                <div class="project-img">
+                    <img src="img/3D Model.png" alt="3D Model" class="project-preview">
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fa-solid fa-cube"></i> Blender 3D</span>
+                    </div>
+                    <h3>3D Models</h3>
+                    <div class="project-explore-btn">
+                        Explore Project <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="project-card" data-project-id="gatepass">
+                <div class="project-img">
+                    <img src="img/gatepass.png" alt="Gatepass" class="project-preview">
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fa-solid fa-mobile-screen"></i> Flutter</span>
+                        <span class="project-tag"><i class="fa-brands fa-js"></i> JS</span>
+                    </div>
+                    <h3>Gatepass Apk</h3>
+                    <div class="project-explore-btn">
+                        Explore Project <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="project-card" data-project-id="haja-website">
+                <div class="project-img">
+                    <img src="img/HAJAweb.png" alt="HAJA Rentals and Apparel" class="project-preview">
+                </div>
+                <div class="project-info">
+                    <div class="project-tags">
+                        <span class="project-tag"><i class="fa-brands fa-figma"></i> Figma</span>
+                        <span class="project-tag"><i class="fa-solid fa-compass-drafting"></i> Website Design</span>
+                    </div>
+                    <h3>HAJA Rentals and Apparel</h3>
+                    <div class="project-explore-btn">
+                        Explore Project <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2 class="section-title">My <span>Certifications</span></h2>
+        <p class="certifications-subtitle">
+            Professional credentials and training programs that validate my skills in development, design, and
+            emerging technologies.
+        </p>
+
+        <div class="certifications-grid">
+            <!-- Card 1 -->
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="certs/start.png" alt="Cisco Cybersecurity Certificate">
+                </div>
+                <div class="cert-info">
+                    <h3>CCNA: Getting Started with Cisco</h3>
+                    <span class="cert-instructor"><i class="fa-solid fa-user-tie"></i> Instructor: Cristopher
+                        Anana</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="certs/Intro.png" alt="Google UX Design Certificate">
+                </div>
+                <div class="cert-info">
+                    <h3>CCNA: Introduction to Networks</h3>
+                    <span class="cert-instructor"><i class="fa-solid fa-user-tie"></i> Instructor: Cristopher
+                        Anana</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="cert-card">
+                <div class="cert-img">
+                    <img src="certs/switch.png" alt="Google UX Design Certificate">
+                </div>
+                <div class="cert-info">
+                    <h3>CCNA: Switching, Routing, and Wireless Essentials</h3>
+                    <span class="cert-instructor"><i class="fa-solid fa-user-tie"></i> Instructor: Jonilyn
+                        Dabalos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+
+        <div class="contact-container">
+            <!-- Details / Links -->
+            <div class="contact-details">
+                <h3>Let's collaborate on your next project</h3>
+                <p>
+                    I am currently open to freelance design opportunities, contract programming projects, or full-time
+                    roles. If you want to build something memorable together, please write to me.
+                </p>
+
+                <ul class="contact-info-list">
+                    <li class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-info-text">
+                            <span>Mail Me</span>
+                            <a href="mailto:aiapallado@gmail.com">aiapallado@gmail.com</a>
+                        </div>
+                    </li>
+                    <li class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-info-text">
+                            <span>Based In</span>
+                            <p>Panabo City, Davao del Norte, Philippines</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="social-links">
+                    <!-- GitHub -->
+                    <a href="https://github.com/settings/profile" target="_blank" class="social-icon"
+                        aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/albea-pallado-0456a2345/" target="_blank" class="social-icon"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/aiapallado?igsh=eWRhb3Q4ZmUwc2k4" target="_blank"
+                        class="social-icon" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!-- Facebook (or another platform) -->
+                    <a href="https://www.facebook.com/albeatatoy.pallado" target="_blank" class="social-icon"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/aiapallado@gmail.com"
+                method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe" required
+                        autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="jane@example.com"
+                        required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" class="form-control"
+                        placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="align-self: flex-start; border: none;">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <!-- Left Side: Image Slider -->
+                <div class="modal-slider-container">
+                    <div class="modal-slider" id="modal-slider">
+                        <!-- Images will be injected dynamically -->
+                    </div>
+                    <button class="slider-btn prev-btn" id="prev-btn" aria-label="Previous image">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" id="next-btn" aria-label="Next image">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <div class="slider-dots" id="slider-dots">
+                        <!-- Dots will be injected dynamically -->
+                    </div>
+                </div>
+
+                <!-- Right Side: Details -->
+                <div class="modal-details">
+                    <div class="modal-tags" id="modal-tags">
+                        <!-- Tags will be injected dynamically -->
+                    </div>
+                    <h3 id="modal-title">Project Title</h3>
+
+                    <div class="modal-meta">
+                        <div class="meta-item">
+                            <i class="fa-solid fa-user"></i>
+                            <span class="meta-label">Client:</span>
+                            <strong id="modal-client">Client Name</strong>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="meta-label">Date:</span>
+                            <strong id="modal-date">Date of Work</strong>
+                        </div>
+                    </div>
+
+                    <p id="modal-desc">Project Description goes here...</p>
+
+                    <div class="modal-links">
+                        <a href="#" id="modal-github" target="_blank" class="btn btn-secondary">
+                            <i class="fa-brands fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Aia. All Rights Reserved. An IT Student with passion.</p>
+        <a href="#home" class="btn-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
