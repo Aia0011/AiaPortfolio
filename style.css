@@ -227,12 +227,13 @@ header.scrolled {
 /* Landing vs Portfolio view modes */
 html.landing-mode,
 body.landing-mode {
-    overflow: hidden;
-    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: auto;
 }
 
 body.landing-mode {
-    position: fixed;
+    position: static;
     width: 100%;
 }
 
@@ -255,8 +256,8 @@ body.landing-mode footer {
 
 body.landing-mode #home {
     min-height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
+    max-height: none;
+    overflow: visible;
     padding-top: 120px;
     padding-bottom: 60px;
 }
@@ -1385,6 +1386,56 @@ footer p {
     align-items: center;
     gap: 8px;
     border-radius: 30px;
+}
+
+/* Feedback Modal Styling */
+.feedback-modal-content {
+    max-width: 520px;
+}
+
+.feedback-modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 32px 40px;
+    gap: 16px;
+}
+
+.feedback-modal-icon {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    background: rgba(255, 0, 127, 0.12);
+    border: 1px solid rgba(255, 0, 127, 0.4);
+    color: var(--pink-primary);
+    box-shadow: 0 0 18px var(--pink-glow-soft);
+}
+
+.feedback-modal-icon.success {
+    color: #7affbc;
+    border-color: rgba(122, 255, 188, 0.6);
+    background: rgba(122, 255, 188, 0.12);
+}
+
+.feedback-modal-icon.error {
+    color: #ff6b7a;
+    border-color: rgba(255, 107, 122, 0.6);
+    background: rgba(255, 107, 122, 0.12);
+}
+
+#feedback-modal-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+#feedback-modal-message {
+    color: var(--text-secondary);
+    max-width: 380px;
 }
 
 /* Modal Open Body Lock */

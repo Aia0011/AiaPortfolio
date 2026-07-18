@@ -24,18 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.add('landing-mode');
         document.body.classList.add('landing-mode');
         document.body.classList.remove('portfolio-mode');
-        window.addEventListener('wheel', preventScroll, { passive: false });
-        window.addEventListener('touchmove', preventScroll, { passive: false });
-        window.addEventListener('keydown', preventScrollKeys);
     }
 
     function unlockPortfolioScroll() {
         document.documentElement.classList.remove('landing-mode');
         document.body.classList.remove('landing-mode');
         document.body.classList.add('portfolio-mode');
-        window.removeEventListener('wheel', preventScroll);
-        window.removeEventListener('touchmove', preventScroll);
-        window.removeEventListener('keydown', preventScrollKeys);
     }
 
     function preventScrollKeys(event) {
@@ -298,6 +292,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalSlider = document.getElementById('modal-slider');
     const modalTags = document.getElementById('modal-tags');
     const modalTitle = document.getElementById('modal-title');
+    const feedbackModal = document.getElementById('feedback-modal');
+    const feedbackModalClose = document.getElementById('feedback-modal-close');
+    const feedbackModalOverlay = document.getElementById('feedback-modal-overlay');
+    const feedbackModalIcon = document.getElementById('feedback-modal-icon');
+    const feedbackModalTitle = document.getElementById('feedback-modal-title');
+    const feedbackModalMessage = document.getElementById('feedback-modal-message');
     const modalClient = document.getElementById('modal-client');
     const modalDate = document.getElementById('modal-date');
     const modalDesc = document.getElementById('modal-desc');
@@ -448,6 +448,38 @@ document.addEventListener('DOMContentLoaded', () => {
     modalClose.addEventListener('click', closeProjectModal);
     modalOverlay.addEventListener('click', closeProjectModal);
 
+    function showFeedbackModal(type, title, message) {
+        if (!feedbackModal) return;
+
+        feedbackModalTitle.textContent = title;
+        feedbackModalMessage.textContent = message;
+
+        if (feedbackModalIcon) {
+            if (type === 'success') {
+                feedbackModalIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+                feedbackModalIcon.classList.add('success');
+                feedbackModalIcon.classList.remove('error');
+            } else {
+                feedbackModalIcon.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+                feedbackModalIcon.classList.add('error');
+                feedbackModalIcon.classList.remove('success');
+            }
+        }
+
+        feedbackModal.classList.add('active');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeFeedbackModal() {
+        if (!feedbackModal) return;
+
+        feedbackModal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+    }
+
+    feedbackModalClose?.addEventListener('click', closeFeedbackModal);
+    feedbackModalOverlay?.addEventListener('click', closeFeedbackModal);
+
     // Keyboard navigation (Escape to close, Arrows to slide)
     document.addEventListener('keydown', (e) => {
         if (!projectModal.classList.contains('active')) return;
@@ -501,15 +533,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(response => response.json())
                 .then(data => {
                     if (data.success === "true" || data.success === true) {
-                        alert('Thank you! Your message has been sent successfully.');
                         contactForm.reset();
+                        showFeedbackModal('success', 'Message Sent', 'Thank you! Your message has been sent successfully.');
                     } else {
-                        alert(data.message || 'Oops! Something went wrong. Please try again.');
+                        showFeedbackModal('error', 'Submission Failed', data.message || 'Oops! Something went wrong. Please try again.');
                     }
                 })
                 .catch(error => {
                     console.error('Error submitting form:', error);
-                    alert('Oops! There was an error sending your message. Please check your network and try again.');
+                    showFeedbackModal('error', 'Network Error', 'Oops! There was an error sending your message. Please check your network and try again.');
                 })
                 .finally(() => {
                     submitBtn.disabled = false;
